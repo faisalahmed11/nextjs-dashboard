@@ -1,0 +1,17 @@
+#5  Backend-Limitations
+1. Long-running task
+2. background tasks 
+3. Database connections
+4. Cold Start (takes more for first response)
+5. No persistent file system
+6. Websockets.
+
+
+
+
+#5. Custom Server
+1. Best tool for the job
+2. Scale independently
+3. Fault isolation
+4. Independent deployment
+5. Better for different teams

@@ -1,0 +1,130 @@
+#6. NOTE:
+1.use Link from next/link instead of <a>
+2. next/font
+# it optimizes  fonts by downloading the font at build time, this way we don't see any layout shift on initial render. 
+ 
+#4. Partial Rendering.
+# when rerender occured due to a change in page's content then the layout will not rerender only page will rerender this is c/d partial rendering. 
+
+
+#4. Routing (file based routing)
+
+1. app/about/page.tsx
+export default function Page(){
+    return <div>About Page</div>
+}
+
+#3. Nested Routing 
+1. app/products/electronics/page.tsx
+export default function Page(){
+    return <div>Electronics Page</div>
+}
+
+
+#4. Linking and Navigation
+
+#5. next/link:
+/*
+import Link from 'next/link'
+export default function Page() {
+    return <Link href="/dashboard">Dashboard</Link>
+  }
+  */
+
+1.to make the router unable to back;
+/*
+<Link replace href="/dashboard">Dashboard</Link>
+*/
+
+
+#5. next/Navigation
+  The useRouter hook allows you to programmatically change routes from
+
+/*
+  'use client'
+ 
+import { useRouter } from 'next/navigation'
+ 
+export default function Page() {
+  const router = useRouter()
+ 
+  return (
+    <button type="button" onClick={() => router.push('/dashboard')}>
+      Dashboard
+    </button>
+  )
+}
+*/
+
+#5. Redirecting
+/*
+import { redirect } from 'next/navigation'
+
+if (!team) {
+    redirect('/login')
+  }
+*/
+
+
+
+#4. next/script 
+/*
+import Script from 'next/script'
+ 
+export default function Dashboard() {
+  return (
+    <>
+      <Script src="https://example.com/script.js" />
+    </>
+  )
+}
+*/
+
+#4. next/image
+ 1.Preventing layout shift automatically when images are loading.
+ 2.Resizing images to avoid shipping large images to devices with a smaller viewport.
+ 3.Lazy loading images by default.
+ 4.Serving images in modern formats, like WebP and AVIF, when the browser supports it.
+ 
+
+# Configuration:
+1. add the domain inside the next.config file.
+/*
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["unsplash.it"],
+  },
+};
+
+export default nextConfig;
+*/
+
+#1 USE:
+1. /*
+import Image from 'next/image'
+ 
+export default function Page() {
+  return (
+    <Image
+    src={"https://unsplash.it/500/500"}
+    width={500}
+    height={500}
+    loading="lazy"
+    alt="random unsplash image"
+  />
+  )
+}
+*/
+
+2./*
+<div className="relative image-container w-screen h-screen bg-red-500 ">
+<Image
+  src={"https://unsplash.it/1500/1500"}
+  fill
+  objectFit="cover"
+  loading="lazy"
+  alt="random unsplash image"
+/>
+</div>
+*/

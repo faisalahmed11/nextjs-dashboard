@@ -1,0 +1,12 @@
+1. mockapi.io
+2. clsx
+# an external package which allows you to conditionally add class names.
+ /* 
+      className={clsx(
+        'default classes',
+        {
+          'classes ': status === "pending",
+          'classes ': status === 'paid',
+        },
+      )} 
+ */

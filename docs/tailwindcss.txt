@@ -1,0 +1,4 @@
+
+#4. Text & Fonts
+1."antialised"
+# it smooth the text
