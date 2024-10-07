@@ -1,7 +1,6 @@
 import "@/app/ui/global.css";
 // importing global styles.
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 import { inter } from "./ui/fonts";
 import { Metadata } from "next";
 
@@ -21,12 +20,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="DddYjgoVEKB2fa0fgE0Zob-kaU9zwlCbgn_2_yc6PYo"
-        />
-      </Head>
       <body className={`${inter.className} antialiased`}>
         {children}
         <Analytics />
