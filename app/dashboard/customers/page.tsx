@@ -1,3 +1,7 @@
-export default function Page() {
-  return <div>Customers page</div>;
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Customers",
+};
+export default async function Page() {
+  return <div>Customers pages</div>;
 }
